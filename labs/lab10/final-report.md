@@ -13,14 +13,14 @@ Quá trình phát triển được chia thành 10 lab: từ phân tích yêu c�
 ---
 
 ## 2. Artifacts Tổng Hợp
-- **Lab 02 – Use Case Diagram** → [link](../lab02-uc/)  
-- **Lab 03 – Sequence Diagram** → [link](../lab03-sequence/)  
-- **Lab 04 – Form Login** → [link](../lab04-form-login/)  
-- **Lab 05 – ERD + Database** → [link](../lab05-erd/)  
+- **Lab 02 – Use Case Diagram** (https://github.com/KhangD23PTIT/NMCNPM/tree/main/labs/lab02-uc)  
+- **Lab 03 – Sequence Diagram** (https://github.com/KhangD23PTIT/NMCNPM/tree/main/labs/lab03-atm-diagrams))  
+- **Lab 04 – Form Login** (https://github.com/KhangD23PTIT/NMCNPM/tree/main/labs/lab04-form-login) 
+- **Lab 05 – ERD + Database** (https://github.com/KhangD23PTIT/NMCNPM/tree/main/labs/lab05-integration-report))  
 - **Lab 06 – Class Diagram** → [link](../lab06-class/)  
 - **Lab 07 – Withdraw Module** → [link](../lab07-withdraw/)  
-- **Lab 08 – Unit Test & Integration Test** → [link](../lab08-test/)  
-- **Lab 09 – Jira Report** → [link](../lab09-jira/)  
+- **Lab 08 – Unit Test & Integration Test**(https://github.com/KhangD23PTIT/NMCNPM/tree/main/labs/lab08-testing)  
+- **Lab 09 – Jira Report** (https://github.com/KhangD23PTIT/NMCNPM/blob/main/labs/lab09.pdf)/)  
 
 (Ảnh UML, ERD, test screenshot có thể đặt trong thư mục `/labs/lab10/artifacts/`)
 
