@@ -19,9 +19,9 @@ Mục tiêu: áp dụng toàn bộ quy trình phát triển phần mềm từ ph
 ---
 
 ## 3. UML Models
-- **Use Case Diagram**: [Lab 02]  
-- **Sequence Diagram**: [Lab 03]  
-- **Class Diagram**: [Lab 06]  
+- **Use Case Diagram**: [Lab 02] (https://github.com/KhangD23PTIT/NMCNPM/tree/main/labs/lab02-uc)
+- **Sequence Diagram**: [Lab 03]  (https://github.com/KhangD23PTIT/NMCNPM/tree/main/labs/lab03-atm-diagrams)
+- **Class Diagram**: [Lab 06]  (
 
 Hệ thống ATM gồm các actor: **User**, **ATM System**, và các ca sử dụng: Đăng nhập, Rút tiền, Kiểm tra số dư, Đăng xuất.
 
