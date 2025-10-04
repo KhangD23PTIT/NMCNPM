@@ -28,7 +28,7 @@ Các chức năng chính của hệ thống:
 ---
 
 ## 📌 Mô hình UML
-1. 1. Use Case Diagram: ![Use Case](https://github.com/KhangD23PTIT/NMCNPM/blob/main/labs/lab02-uc/LAB02.png)  
+1. Use Case Diagram: ![Use Case](https://github.com/KhangD23PTIT/NMCNPM/blob/main/labs/lab02-uc/LAB02.png)  
 2. Sequence Diagram: ![Sequence](https://github.com/KhangD23PTIT/NMCNPM/blob/main/labs/lab03-atm-diagrams/LAB03-SQ-ATM.png)
 3. **Class Diagram**: các lớp chính gồm `ATM`, `Card`, `Account`, `Transaction`.  
 4. **Package Diagram**: chia hệ thống thành UI, Controller, BankService, Hardware.  
@@ -71,7 +71,4 @@ Các chức năng chính của hệ thống:
 
 ## 📎 Nộp bài
 - **GitHub repo**: [điền link repo của bạn]  
-- **Slide thuyết trình (nếu có)**: [link Google Drive hoặc file PPTX]  
-- **Demo trên lớp**: chạy Form Login + Withdraw + Jira board.  
-
 ---
