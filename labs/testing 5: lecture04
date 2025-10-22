@@ -1,0 +1,131 @@
+BÀI TẬP 4 - NHÓM 4
+•	Lương Kim Chi - N23DCPT066
+•	Hoàng Lê Nguyên Khang - N23DCP025
+•	Trương Quỳnh Như - N23DCPT099
+1.	CÂU HỎI TRẮC NGHIỆM
+1. B
+2. C
+3. B
+4. A
+5. B
+6. A
+7. B
+8. D
+9. B
+10. B
+2.	CÂU HỎI TRẢ LỜI NGẮN
+1.	Nhóm SQA là gì và vai trò của nhóm này trong phát triển phần mềm?
+→. Nhóm SQA (Software Quality Assurance) có vai trò đảm bảo quy trình phát triển phần mềm tuân thủ các tiêu chuẩn chất lượng, giúp phát hiện sai sót trong quy trình và cải tiến liên tục.
+2.	Kiểm thử đơn vị là gì?
+ → Kiểm thử đơn vị là quá trình kiểm tra từng module hoặc hàm riêng lẻ của phần mềm để đảm bảo chúng hoạt động đúng như mong đợi.
+3.	 Mục tiêu chính của kiểm thử chấp nhận là gì?
+ → Mục tiêu là xác nhận phần mềm đáp ứng đầy đủ yêu cầu của khách hàng và sẵn sàng để bàn giao hoặc triển khai thực tế.
+4.	Các hoạt động chính trong kiểm thử sản phẩm phi thực thi là gì?
+ → Bao gồm walkthrough, review và inspection các tài liệu như yêu cầu, thiết kế, kế hoạch kiểm thử… nhằm phát hiện lỗi sớm mà không cần chạy phần mềm.
+5.	Tại sao việc lập tài liệu cho mô hình pha phát triển phần mềm lại quan trọng?
+ → Vì tài liệu giúp theo dõi tiến trình, hỗ trợ bảo trì, nâng cấp và đảm bảo sự nhất quán giữa các thành viên trong nhóm phát triển.
+6.	Quản lý phiên bản tài liệu là gì?
+ → Là quá trình kiểm soát các thay đổi của tài liệu, giúp lưu trữ lịch sử chỉnh sửa và truy xuất lại các phiên bản cũ khi cần thiết.
+7.	Các loại kiểm thử chính trong kiểm thử sản phẩm phần mềm là gì?
+ → Gồm kiểm thử đơn vị, kiểm thử tích hợp, kiểm thử hệ thống và kiểm thử chấp nhận..
+8.	 Kiểm thử tích hợp là gì?
+ → Là quá trình kiểm tra sự tương tác giữa các module đã được kiểm thử đơn vị, nhằm đảm bảo chúng hoạt động đúng khi kết hợp với nhau.
+9.	Hoạt động lập kế hoạch cho các pha phát triển phần mềm bao gồm những gì?
+ → Bao gồm xác định phạm vi công việc, phân bổ nguồn lực, ước lượng thời gian, chi phí và rủi ro của từng pha.
+10.	Làm tài liệu kiểm thử bao gồm những gì?
+ → Bao gồm kế hoạch kiểm thử, trường hợp kiểm thử (test case), dữ liệu kiểm thử, kết quả kiểm thử và báo cáo lỗi.
+3. CÂU HỎI THẢO LUẬN NHÓM
+1. Vai trò của nhóm SQA (Software Quality Assurance) trong việc đảm bảo chất lượng phần mềm là gì?
+Vai trò chính của SQA là đảm bảo quy trình phát triển được thực hiện chính xác và ngăn ngừa lỗi phát sinh.
+•	Thiết lập và Duy trì Tiêu chuẩn: Xây dựng, phổ biến và duy trì các tiêu chuẩn, quy trình và hướng dẫn chất lượng.
+•	Kiểm tra và Đánh giá Quy trình (Process Audits): Đánh giá độc lập các hoạt động phát triển (kế hoạch, thiết kế, mã hóa, kiểm thử) để đảm bảo tuân thủ tiêu chuẩn.
+•	Phòng ngừa Lỗi: Tập trung vào cải thiện quy trình phát triển để giảm khả năng xảy ra lỗi từ sớm.
+•	Đo lường và Báo cáo: Thu thập các số liệu chất lượng (metrics), phân tích nguyên nhân gốc rễ của vấn đề. Báo cáo tình trạng chất lượng và mức độ tuân thủ quy trình lên quản lý.
+•	Đào tạo: Đảm bảo các thành viên dự án hiểu và tuân thủ các quy trình chất lượng đã thiết lập.
+2. Thảo luận về sự khác nhau giữa kiểm thử đơn vị và kiểm thử tích hợp.
+•	Kiểm thử Đơn vị (Unit Testing):
+•	Phạm vi: Các thành phần nhỏ nhất và độc lập (hàm, lớp, module).
+•	Mục tiêu: Xác nhận logic nội bộ của một đơn vị có hoạt động chính xác.
+•	Ai thực hiện: Thường là Lập trình viên.
+•	Thời điểm: Rất sớm, ngay sau khi mã hóa.
+•	Môi trường: Thường cô lập, sử dụng Stubs/Drivers để mô phỏng sự phụ thuộc.
+•	Kiểm thử Tích hợp (Integration Testing):
+•	Phạm vi: Sự tương tác, giao diện, và luồng dữ liệu giữa các module đã được kiểm thử đơn vị.
+•	Mục tiêu: Xác nhận các module hoạt động ăn khớp với nhau khi kết hợp.
+•	Ai thực hiện: Thường là Nhóm Kiểm thử hoặc Lập trình viên.
+•	Thời điểm: Sau khi các đơn vị đã hoàn thành và sẵn sàng để kết hợp.
+•	Môi trường: Gần giống với môi trường hoạt động thực tế.
+3. Tại sao việc lập tài liệu kiểm thử lại quan trọng trong mỗi dự án phần mềm?
+Lập tài liệu kiểm thử cung cấp một hồ sơ chính thức, minh bạch và có thể truy xuất cho toàn bộ quá trình đảm bảo chất lượng.
+•	Lập kế hoạch và tổ chức: Kế hoạch kiểm thử (Test Plan) giúp xác định phạm vi, mục tiêu, chiến lược và nguồn lực, tạo sự thống nhất.
+•	Độ bao phủ đầy đủ: Trường hợp kiểm thử (Test Cases) đảm bảo mọi yêu cầu được kiểm tra. Ma trận truy vết yêu cầu liên kết giữa yêu cầu và kiểm thử.
+•	Bằng chứng và chất lượng: Báo cáo Tổng kết kiểm báo cáo lỗi cung cấp bằng chứng khách quan về tình trạng chất lượng tại thời điểm phát hành.
+•	Tái sử dụng và bảo trì: Tài liệu kiểm thử là cơ sở để thực hiện kiểm thử hồi quy (Regression Testing) khi có thay đổi hoặc bảo trì.
+•	Hỗ trợ ra quyết định: Dữ liệu kiểm thử giúp quản lý đưa ra quyết định sáng suốt về việc phát hành sản phẩm.
+4. Thảo luận về các thách thức khi lập kế hoạch cho các pha phát triển phần mềm.
+•	Thay đổi yêu cầu (Scope Creep): Yêu cầu không ổn định dẫn đến đánh giá sai về nỗ lực và thời gian ban đầu.
+•	Ước tính không chính xác: Khó khăn trong việc ước tính thời gian/nguồn lực cho các tác vụ phức tạp (như xử lý rủi ro kỹ thuật) do thiếu dữ liệu hoặc kỹ thuật ước tính chưa phù hợp.
+•	Quản lý rủi ro không đầy đủ: Không xác định hoặc không lập kế hoạch giảm thiểu các rủi ro tiềm ẩn (như thiếu nhân sự có kỹ năng hoặc sự cố công cụ).
+•	Phụ thuộc lẫn nhau (Dependencies) phức tạp: Sự chậm trễ ở một pha (ví dụ: thiết kế) sẽ lan truyền và ảnh hưởng nghiêm trọng đến lịch trình của các pha tiếp theo (mã hóa, kiểm thử).
+•	Thiếu cam kết và nguồn lực: Kế hoạch không thực hiện được do nguồn lực (nhân sự, ngân sách) không được phân bổ đầy đủ hoặc kịp thời.
+5. Quản lý phiên bản tài liệu có ảnh hưởng như thế nào đến quá trình bảo trì phần mềm?
+•	Đảm bảo tính chính xác: Đảm bảo đội bảo trì luôn làm việc với phiên bản tài liệu mới nhất và chính xác tương ứng với phiên bản mã nguồn đang bảo trì.
+•	Truy vết lịch sử thay đổi: Ghi lại lịch sử của tất cả các thay đổi tài liệu (ai thay đổi, khi nào, tại sao), giúp hiểu bối cảnh và xác định nguyên nhân gốc rễ của lỗi.
+•	Hỗ trợ hoàn tác (Rollback): Khả năng quay trở lại một phiên bản tài liệu trước đó giúp giảm thiểu rủi ro khi thực hiện các thay đổi lớn trong bảo trì.
+•	Tăng cường hiệu quả: Giảm thời gian tìm kiếm thông tin và xác định phiên bản tài liệu đúng, giúp tăng tốc độ sửa lỗi và triển khai các thay đổi mới.
+6. So sánh giữa kiểm thử sản phẩm phi thực thi và kiểm thử sản phẩm thực thi.
+•	Kiểm thử Sản phẩm Phi thực thi (Static Testing):
+•	Bản chất: Kiểm tra tài liệu và mã nguồn mà không cần chạy chương trình.
+•	Mục tiêu: Tìm lỗi, thiếu sót trong thiết kế, tiêu chuẩn mã hóa, và tài liệu.
+•	Kỹ thuật: Review (Walkthrough, Inspection), Phân tích tĩnh (Static Analysis).
+•	Ưu điểm: Tìm lỗi sớm hơn, chi phí sửa chữa thấp; Phát hiện các lỗi về tiêu chuẩn mà kiểm thử động không thấy.
+•	Kiểm thử sản phẩm thực thi (Dynamic Testing):
+•	Bản chất: Kiểm tra hành vi của phần mềm bằng cách thực thi mã nguồn.
+•	Mục tiêu: Tìm lỗi trong quá trình chạy, kiểm tra chức năng, hiệu năng, bảo mật.
+•	Kỹ thuật: Kiểm thử hộp đen (Black-box), Kiểm thử hộp trắng (Unit Testing), Kiểm thử hồi quy (Regression).
+•	Ưu điểm: Đánh giá hành vi thực tế; Xác nhận phần mềm đáp ứng yêu cầu người dùng.
+7. Thảo luận về cách cải thiện quy trình lập kế hoạch để giảm thiểu rủi ro trong dự án phần mềm.
+•	Ước tính chính xác và thêm đệm rủi ro:
+•	Sử dụng kỹ thuật ước tính dựa trên dữ liệu lịch sử hoặc sự đồng thuận của chuyên gia (Kỹ thuật Delphi, Planning Poker).
+•	Bổ sung đệm rủi ro (Contingency Buffer) vào thời gian và ngân sách.
+•	Quản lý rủi ro tích hợp (Chủ động):
+•	Xác định và lập ma trận rủi ro trong giai đoạn lập kế hoạch.
+•	Xây dựng Kế hoạch Giảm thiểu và Dự phòng cụ thể cho các rủi ro có xác suất/tác động cao.
+•	Thiết lập cơ chế theo dõi và đánh giá lại rủi ro liên tục.
+•	Lập kế hoạch Linh hoạt và Phân đoạn (Agile Planning):
+•	Chia dự án thành các Sprint/Pha ngắn hạn.
+•	Thường xuyên kiểm điểm và điều chỉnh kế hoạch để thích ứng với thay đổi.
+•	Tăng cường sự tham gia và cam kết: Đảm bảo tất cả các bên liên quan tham gia vào quá trình lập kế hoạch để tạo sự hiểu biết và cam kết chung.
+8. Đề xuất các công cụ hỗ trợ việc lập tài liệu kiểm thử và quản lý phiên bản.
+•	Công cụ Hỗ trợ Lập tài liệu Kiểm thử (Test Management Tools):
+•	TestRail: Chuyên dụng cho việc quản lý các trường hợp kiểm thử, chu kỳ kiểm thử và báo cáo kết quả.
+•	Zephyr (cho Jira): Tích hợp sâu với Jira, giúp liên kết yêu cầu và lỗi với các trường hợp kiểm thử.
+•	Micro Focus ALM/Quality Center: Giải pháp quản lý chất lượng cấp doanh nghiệp, hỗ trợ toàn diện.
+•	Confluence: Hữu ích để ghi lại Kế hoạch kiểm thử và các tài liệu mô tả quy trình.
+•	Công cụ Quản lý Phiên bản (Version Control Tools)
+•	Git (và các dịch vụ liên quan: GitHub, GitLab, Bitbucket): Tiêu chuẩn ngành để quản lý phiên bản mã nguồn và tài liệu kỹ thuật, hỗ trợ truy vết và hoàn tác mạnh mẽ.
+•	SVN (Subversion): Hệ thống quản lý phiên bản tập trung, vẫn được sử dụng trong một số môi trường doanh nghiệp.
+•	Confluence: Hỗ trợ tính năng quản lý phiên bản tài liệu tích hợp sẵn, đặc biệt cho các tài liệu về yêu cầu và kế hoạch.
+3. CÂU HỎI TÌNH HUỐNG
+1. Một dự án phần mềm đã hoàn thành và sắp bàn giao cho khách hàng, nhưng khách hàng yêu cầu kiểm tra lại toàn bộ tài liệu yêu cầu và thiết kế. Đội phát triển nên xử lý thế nào?
+Cần xem đây là bước xác minh (Verification) cuối cùng. Đội phát triển nên lập bảng đối chiếu giữa yêu cầu – thiết kế – chức năng để chứng minh độ khớp. Nếu có sai lệch nhỏ, ghi chú trong báo cáo bàn giao; nếu sai lệch lớn, thống nhất bằng Change Request. Đây là kiểm tra logic, nên cần hợp tác và minh bạch.
+2. Trong quá trình kiểm thử hệ thống, nhóm phát triển phát hiện một lỗi nghiêm trọng nhưng thời hạn bàn giao đang đến gần. Bạn sẽ xử lý tình huống này như thế nào?
+Đánh giá mức độ rủi ro: nếu lỗi nghiêm trọng (bảo mật, dữ liệu), không được bàn giao. Lập báo cáo lỗi khẩn, thông báo sớm cho khách hàng và xin gia hạn ngắn. Nếu lỗi không ảnh hưởng lớn, có thể bàn giao và kèm bản vá (patch). Không được giấu lỗi.
+3. Một nhóm phát triển gặp khó khăn trong việc quản lý phiên bản tài liệu do tài liệu liên tục thay đổi. Hãy đề xuất giải pháp.
+Sử dụng hệ thống quản lý phiên bản (Git, Google Docs versioning, Confluence). Mỗi thay đổi cần ghi rõ người chỉnh sửa, ngày tháng, nội dung. Thiết lập quy trình phê duyệt: chỉ Scrum Master hoặc PM được chốt version chính thức.
+4. Dự án phát triển phần mềm gặp vấn đề khi khách hàng yêu cầu thay đổi lớn trong pha cài đặt. Đội phát triển nên xử lý thế nào?
+Phân tích tác động thay đổi (Impact Analysis). Lập Change Request để báo thời gian và chi phí phát sinh. Nếu theo Agile, chuyển sang Sprint sau; nếu theo Waterfall, dừng triển khai và cập nhật lại tài liệu SRS, thiết kế trước khi code tiếp.
+5. Nhóm kiểm thử phát hiện nhiều lỗi chức năng trong phần mềm. Tuy nhiên, nhóm phát triển lại cho rằng đây không phải lỗi mà là tính năng. Là trưởng dự án, bạn sẽ làm gì?
+Tổ chức cuộc họp xác minh lỗi (Defect Review). Đối chiếu với tài liệu yêu cầu: nếu hành vi không đúng mô tả thì là lỗi. Nếu yêu cầu chưa rõ, cần cập nhật lại SRS. Ghi nhận trong công cụ quản lý lỗi (Jira, Redmine) với trạng thái ‘Need Clarification’.
+6. Khách hàng yêu cầu bổ sung một tính năng mới khi phần mềm đã hoàn thành pha kiểm thử tích hợp. Đội phát triển nên làm gì?
+Ghi nhận như Change Request mới. Không thêm ngay vào bản hiện tại. Đưa yêu cầu vào phiên bản sau, ước tính lại thời gian và chi phí. Nếu tính năng ảnh hưởng đến test hiện tại, cần chạy lại kiểm thử hồi quy (Regression Test).
+7. Một công ty phát triển phần mềm nhỏ muốn xây dựng nhóm SQA nhưng gặp khó khăn về ngân sách. Hãy đề xuất giải pháp.
+Không cần lập nhóm riêng, có thể kiêm nhiệm vai trò SQA trong nhóm phát triển. Dùng checklist, template, công cụ miễn phí (Selenium, Postman, SonarQube, Jira Free). Có thể thuê SQA part-time hoặc bên ngoài khi cần đánh giá độc lập.
+8. Trong quá trình làm tài liệu kiểm thử, nhóm phát triển không thống nhất được về nội dung cần đưa vào tài liệu. Là trưởng nhóm, bạn sẽ giải quyết vấn đề này như thế nào?
+Tổ chức họp chuẩn hóa tài liệu (template chung). Dựa theo chuẩn IEEE 829 hoặc ISO/IEC/IEEE 29119. Trưởng nhóm duyệt bản mẫu, các thành viên chỉ chỉnh phần test của mình. Lưu version để tránh ghi đè.
+9. Dự án phát triển phần mềm cho một ngân hàng yêu cầu bảo mật cao. Đề xuất cách lập kế hoạch kiểm thử cho dự án này.
+Kế hoạch kiểm thử phải gồm: kiểm thử bảo mật (auth, quyền, mã hóa), kiểm thử xâm nhập (Pen Test), kiểm thử tải (Load/Stress), kiểm thử hồi quy, kiểm thử tuân thủ (PCI-DSS, ISO 27001). Bảo mật luôn ưu tiên cao nhất.
+10. Sau khi triển khai phần mềm, khách hàng phát hiện ra một số lỗi bảo mật nghiêm trọng. Đội phát triển cần xử lý ra sao để khắc phục vấn đề và lấy lại niềm tin từ khách hàng?
+Kích hoạt quy trình khẩn cấp (Incident Response). Khoanh vùng và tạm dừng dịch vụ bị ảnh hưởng. Phân tích log tìm nguyên nhân gốc, phát hành bản vá (patch). Thông báo minh bạch cho khách hàng, cam kết thời gian khắc phục. Sau đó rà soát lại toàn bộ quy trình bảo mật.
+
+
