@@ -1,0 +1,59 @@
+BÀI TẬP 5 - NHÓM 4
+•	Lương Kim Chi - N23DCPT066
+•	Hoàng Lê Nguyên Khang - N23DCP025
+•	Trương Quỳnh Như - N23DCPT099
+1.	CÂU HỎI TRẮC NGHIỆM
+1. B
+2. B
+3. B
+4. C
+5. B
+6. C
+7. B
+8. A
+9. B
+10. A
+2.	CÂU HỎI TRẢ LỜI NGẮN
+1.	Kỹ thuật phỏng vấn khách hàng là gì?
+→ Là phương pháp thu thập yêu cầu bằng cách đặt câu hỏi trực tiếp với khách hàng để hiểu rõ nhu cầu, mong muốn và kỳ vọng của họ đối với hệ thống phần mềm.
+2.	Tại sao cần tổng hợp kết quả yêu cầu?
+ → Kiểm thử đơn vị là quá trình kiểm tra từng module hoặc hàm riêng lẻ của phần mềm để đảm bảo chúng hoạt động đúng như mong đợi.
+3.	Use case là gì?
+ → Là mô tả cách người dùng tương tác với hệ thống để thực hiện một chức năng cụ thể, giúp xác định hành vi của hệ thống từ góc nhìn người dùng
+4.	Mục tiêu của việc xây dựng danh sách từ khóa chuyên môn là gì?
+ → Giúp đội phát triển và khách hàng hiểu rõ các thuật ngữ chuyên ngành, tránh hiểu sai khi phân tích và mô tả yêu cầu.
+5.	Quan hệ Include giữa các use case là gì?
+→ Là quan hệ thể hiện một use case luôn gọi một use case khác để hoàn thành chức năng đầy đủ, dùng để tái sử dụng hành vi chung.
+6.	Quan hệ Extend giữa các use case là gì?
+ → Là quan hệ thể hiện một use case có thể mở rộng thêm chức năng trong một số điều kiện nhất định, giúp tăng tính linh hoạt.
+7.	Yêu cầu phi chức năng là gì?
+ → Là yêu cầu liên quan đến hiệu suất, bảo mật, khả năng mở rộng, tính ổn định… chứ không phải hành vi cụ thể của hệ thống.
+8.	Hiện nghiệp vụ là gì?
+ → Là các hoạt động, quy trình thực tế diễn ra trong tổ chức mà hệ thống phần mềm cần hỗ trợ hoặc mô phỏng lại.
+9.	Điều kiện trước và điều kiện sau của use case là gì?
+ → Điều kiện trước là trạng thái hệ thống cần có trước khi thực hiện use case; điều kiện sau là trạng thái hệ thống sau khi use case hoàn tất.
+10.	Một số lưu ý khi trích các use case là gì?
+ → Cần xác định rõ tác nhân, mục tiêu, phạm vi chức năng; tránh trùng lặp và đảm bảo mỗi use case phản ánh đúng hành vi người dùng.
+3. CÂU HỎI TÌNH HUỐNG
+1. Khách hàng không hiểu rõ các thuật ngữ kỹ thuật trong tài liệu yêu cầu. Là trưởng nhóm phát triển, bạn sẽ làm gì?
+Sử dụng ngôn ngữ dễ hiểu, tránh thuật ngữ kỹ thuật phức tạp. Tạo bảng thuật ngữ (Glossary) để giải thích các từ chuyên môn. Khi họp, minh họa bằng ví dụ hoặc sơ đồ để giúp khách hàng hiểu rõ. Mục tiêu là đảm bảo hai bên hiểu đúng yêu cầu.
+2. Trong quá trình lấy yêu cầu, khách hàng liên tục thay đổi ý kiến về chức năng cần thiết. Đội phát triển nên xử lý ra sao?
+Ghi nhận thay đổi bằng Change Request Form. Phân tích ảnh hưởng đến tiến độ và chi phí. Thống nhất phiên bản yêu cầu 'chốt' (baseline). Nếu áp dụng Agile, đưa thay đổi vào Sprint sau, không thêm vào Sprint hiện tại.
+3. Một dự án phần mềm quản lý bán hàng gặp vấn đề khi các yêu cầu được mô tả quá chung chung, khó thực hiện. Đội phát triển cần làm gì để khắc phục?
+Tổ chức phỏng vấn, workshop, quan sát quy trình thật để hiểu nghiệp vụ. Dùng Use Case hoặc User Story để cụ thể hóa hành vi. Viết lại yêu cầu ở dạng có thể kiểm thử (testable). Ví dụ: 'Thân thiện' → 'Phản hồi < 2 giây, dễ thao tác trên di động.'
+4. Khách hàng đưa ra yêu cầu không rõ ràng và chỉ có thể mô tả sơ lược. Làm thế nào để thu thập yêu cầu đầy đủ từ khách hàng?
+Sử dụng phỏng vấn, bảng câu hỏi, quan sát thực tế, hoặc mô phỏng (prototype). Hỏi thêm về mục tiêu kinh doanh, không chỉ chức năng. Ghi lại và yêu cầu khách hàng xác nhận từng phần. Dùng sơ đồ để giúp họ hình dung dễ hơn.
+5. Trong quá trình xây dựng mô hình nghiệp vụ, một số use case bị trùng lặp về chức năng. Bạn sẽ xử lý tình huống này như thế nào?
+Kiểm tra lại phạm vi và gộp các use case trùng nhau. Nếu chỉ khác ở chi tiết, dùng quan hệ «include» hoặc «extend» để tái sử dụng. Ví dụ: 'Đăng nhập bằng email' và 'Đăng nhập bằng Facebook' có thể là hai biến thể của 'Đăng nhập hệ thống'.
+6. Đội phát triển và khách hàng có ý kiến khác nhau về ý nghĩa của một số từ khóa chuyên môn. Là trưởng dự án, bạn sẽ làm gì?
+Lập bảng thuật ngữ (Glossary) để thống nhất nghĩa các từ chuyên môn. Họp ngắn để làm rõ và cập nhật vào tài liệu SRS. Tất cả tài liệu, sơ đồ sau đó phải dùng đúng thuật ngữ đã được thống nhất.
+7. Sau khi hoàn thành việc trích các use case, đội phát triển nhận ra rằng một số chức năng quan trọng bị bỏ sót. Hãy đề xuất cách giải quyết.
+Cập nhật lại Use Case Diagram và tài liệu yêu cầu. Đánh giá xem chức năng mới ảnh hưởng đến phần khác không. Thực hiện review lại toàn bộ quy trình nghiệp vụ để đảm bảo không còn bỏ sót. Mời khách hàng cùng xem sơ đồ để xác nhận.
+8. Trong quá trình xây dựng mô hình nghiệp vụ, khách hàng yêu cầu bổ sung thêm một số chức năng mới. Đội phát triển nên làm gì?
+Phân tích tác động của yêu cầu mới đến thời gian, chi phí, phạm vi dự án. Lập Change Request để khách hàng duyệt. Nếu dùng Agile, đưa chức năng mới vào Product Backlog để lên kế hoạch cho Sprint sau.
+9. Một nhóm phát triển gặp khó khăn trong việc mô tả chi tiết các use case vì chưa hiểu rõ quy trình nghiệp vụ. Hãy đề xuất giải pháp.
+Mời chuyên gia nghiệp vụ (domain expert) hoặc đại diện khách hàng tham gia. Quan sát thực tế hoặc shadowing (theo dõi công việc thật). Vẽ Business Process Model (BPMN) để hiểu rõ quy trình trước khi viết use case.
+10. Khách hàng yêu cầu thêm một chức năng mới khi hệ thống đã bước vào giai đoạn thiết kế chi tiết. Đội phát triển cần xử lý như thế nào?
+Tạm dừng phần thiết kế bị ảnh hưởng và thực hiện phân tích tác động (impact analysis). Cập nhật lại SRS và tài liệu thiết kế. Báo lại thời gian và chi phí phát sinh cho khách hàng xác nhận trước khi chính thức chỉnh sửa. Nếu thay đổi lớn, nên chuyển sang phiên bản sau.
+
+
