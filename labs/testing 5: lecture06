@@ -1,0 +1,213 @@
+BÀI TẬP 6 - NHÓM 4
+•	Lương Kim Chi - N23DCPT066
+•	Hoàng Lê Nguyên Khang - N23DCP025
+•	Trương Quỳnh Như - N23DCPT099
+1.	CÂU HỎI TRẮC NGHIỆM
+1. C
+2. C
+3. D
+4. B
+5. B
+6. B
+7. A
+8. B
+9. C
+10. C
+
+
+2.	CÂU HỎI TRẢ LỜI NGẮN
+1. Lớp thực thể là gì?
+ → Là lớp chứa dữ liệu và trạng thái của các đối tượng trong hệ thống, thường ánh xạ với bảng trong cơ sở dữ liệu.
+2. Lớp điều khiển có vai trò gì trong hệ thống?
+ → Là lớp trung gian xử lý logic nghiệp vụ, điều phối dữ liệu giữa lớp biên và lớp thực thể.
+3. Scenario là gì?
+ → Là kịch bản mô tả chuỗi các bước tương tác giữa người dùng và hệ thống để đạt được mục tiêu cụ thể.
+4. Quan hệ Include giữa các use case là gì?
+ → Là quan hệ trong đó một use case luôn gọi một use case khác để hoàn tất hành vi, giúp tái sử dụng chức năng.
+5. Mục đích của sơ đồ lớp là gì?
+ → Giúp mô tả cấu trúc tĩnh của hệ thống, thể hiện mối quan hệ giữa các lớp, thuộc tính và phương thức.
+6. Quan hệ Aggregation khác gì so với Composition?
+ → Aggregation: lớp con có thể tồn tại độc lập.
+ → Composition: lớp con phụ thuộc hoàn toàn vào lớp cha, khi cha bị xóa thì con cũng bị xóa.
+7. Sơ đồ tuần tự là gì?
+ → Là sơ đồ thể hiện thứ tự các thông điệp được trao đổi giữa các đối tượng theo thời gian.
+8. Quan hệ Extend giữa các use case là gì?
+ → Là quan hệ thể hiện một use case có thể mở rộng hành vi của use case khác trong những điều kiện nhất định.
+9. Lớp biên có vai trò gì trong hệ thống?
+ → Giao tiếp giữa người dùng hoặc hệ thống bên ngoài với hệ thống phần mềm.
+10. Sơ đồ cộng tác là gì?
+ → Là sơ đồ thể hiện mối quan hệ tương tác giữa các đối tượng trong cùng một luồng xử lý.
+
+3. CÂU HỎI THẢO LUẬN NHÓM
+1. Thảo luận về vai trò của từng loại lớp (thực thể, biên, điều khiển) trong hệ thống.
+ → Lớp thực thể quản lý dữ liệu, lớp biên xử lý giao tiếp, lớp điều khiển xử lý nghiệp vụ và luồng dữ liệu. Ba loại lớp này phối hợp giúp hệ thống hoạt động rõ ràng và tách biệt trách nhiệm.
+2. So sánh sự khác nhau giữa Aggregation và Composition.
+ → Aggregation là quan hệ “sở hữu lỏng lẻo”, còn Composition là “sở hữu chặt chẽ”. Trong Composition, vòng đời của đối tượng phụ thuộc vào đối tượng chứa nó.
+3. Thảo luận về tầm quan trọng của việc xây dựng sơ đồ lớp trong quá trình phân tích hệ thống.
+ → Sơ đồ lớp giúp hiểu cấu trúc, xác định mối quan hệ giữa các lớp, hỗ trợ thiết kế và bảo trì hệ thống hiệu quả.
+4. Phân biệt sơ đồ tuần tự và sơ đồ cộng tác.
+ → Sơ đồ tuần tự tập trung vào thứ tự thời gian của thông điệp; sơ đồ cộng tác nhấn mạnh mối quan hệ giữa các đối tượng.
+5. Thảo luận về vai trò của lớp điều khiển trong mô hình MVC.
+ → Lớp điều khiển quản lý luồng dữ liệu giữa View và Model, đảm bảo tách biệt logic nghiệp vụ với giao diện người dùng.
+6. Tại sao cần viết các scenario khi phân tích hệ thống?
+ → Scenario giúp mô tả chi tiết các tình huống sử dụng, giúp nhóm phát triển và khách hàng hiểu rõ yêu cầu và hành vi hệ thống.
+7. Làm thế nào để đảm bảo rằng các use case được trích đầy đủ và chính xác?
+ → Cần phỏng vấn kỹ khách hàng, kiểm tra tính bao phủ yêu cầu, tránh trùng lặp, và cập nhật liên tục khi có thay đổi.
+8. Thảo luận về mối quan hệ giữa use case và scenario.
+ → Mỗi use case có thể có nhiều scenario mô tả các tình huống khác nhau (chính, phụ, ngoại lệ) của cùng một chức năng.
+9. Phân tích ưu và nhược điểm của việc sử dụng sơ đồ tuần tự trong thiết kế hệ thống.
+ → Ưu điểm: dễ hiểu, mô tả rõ luồng tương tác.
+ → Nhược điểm: khó bảo trì khi hệ thống lớn, thay đổi nhỏ có thể ảnh hưởng nhiều sơ đồ.
+10. Thảo luận về cách cải thiện chất lượng kịch bản sử dụng (scenario) trong quá trình phân tích.
+ → Cần mô tả rõ vai trò, điều kiện trước và sau, tình huống ngoại lệ; đồng thời rà soát, thống nhất với khách hàng trước khi triển khai.
+4. CÂU HỎI THẢO LUẬN TÌNH HUỐNG
+1. Khi phát hiện yêu cầu mới sau khi viết xong scenario, nhóm cần làm gì?
+ → Cập nhật lại tài liệu yêu cầu, điều chỉnh scenario liên quan và đảm bảo tính nhất quán trong toàn hệ thống.
+2. Nếu gặp khó khăn khi xác định lớp điều khiển, giải pháp là gì?
+ → Xác định lại các hành vi nghiệp vụ và logic xử lý, từ đó tách phần giao tiếp (biên) và dữ liệu (thực thể) để xác định lớp điều khiển phù hợp.
+3. Khi khách hàng yêu cầu thêm chức năng mới sau khi hoàn thành sơ đồ lớp, cần làm gì?
+ → Phân tích yêu cầu mới, cập nhật sơ đồ lớp và các quan hệ liên quan, sau đó kiểm tra tác động đến các thành phần khác.
+4. Khi có nhiều trường hợp ngoại lệ trong scenario “Đăng ký khóa học”, nên xử lý thế nào?
+ → Tách riêng các scenario phụ cho từng trường hợp ngoại lệ để dễ quản lý và kiểm thử.
+5. Nếu trong sơ đồ tuần tự có đối tượng không rõ vai trò, nhóm cần làm gì?
+ → Xem lại logic nghiệp vụ, loại bỏ hoặc xác định rõ trách nhiệm của đối tượng đó.
+6. Khi phát hiện quan hệ giữa các lớp bị sai, cần làm gì?
+ → Kiểm tra lại yêu cầu và mô hình nghiệp vụ, sửa quan hệ cho đúng bản chất “kế thừa”, “liên kết” hoặc “chứa”.
+7. Khi gặp khó khăn mô tả các quan hệ giữa use case, cần làm gì?
+ → Dựa vào hành vi chung – riêng để xác định include, extend hoặc generalization phù hợp.
+8. Xác định lớp biên trong hệ thống quản lý bán hàng như thế nào?
+ → Lớp biên có thể là CustomerUI, AdminUI, PaymentAPI, nơi tiếp nhận yêu cầu từ người dùng hoặc hệ thống khác.
+9. Khi có yêu cầu mới sau khi hoàn thiện scenario, nhóm nên làm gì?
+ → Cập nhật lại scenario, đánh giá ảnh hưởng đến các use case và điều chỉnh tài liệu thiết kế tương ứng.
+10. Khi trong sơ đồ cộng tác có đối tượng không tương tác đúng, cần xử lý thế nào?
+ → Xem lại logic và thứ tự luồng xử lý, chỉnh sửa lại các thông điệp hoặc loại bỏ đối tượng không cần thiết.
+I.	CÂU HỎI TRẮC NGHIỆM
+1.	C
+2.	C
+3.	C
+4.	C
+5.	B
+6.	C
+7.	A
+8.	A
+9.	B
+10.	C
+II.	CÂU HỎI TRẢ LỜI NGẮN
+1.	Định nghĩa phần mềm và công nghệ phần mềm.
+ → Phần mềm là tập hợp các chương trình và dữ liệu điều khiển hoạt động của máy tính.
+ Công nghệ phần mềm là ngành nghiên cứu và áp dụng các phương pháp, công cụ để phát triển, bảo trì và quản lý phần mềm hiệu quả.
+
+
+2.	Mô tả ngắn gọn về các mô hình vòng đời phát triển phần mềm phổ biến.
+ → Gồm có: Waterfall (thác nước), Spiral (xoắn ốc), Agile (linh hoạt), và Iterative (lặp). Mỗi mô hình có cách tổ chức quy trình phát triển khác nhau tùy vào tính chất dự án.
+
+
+3.	Liệt kê ba loại yêu cầu phần mềm chính và giải thích từng loại.
+ → Yêu cầu chức năng, phi chức năng, và yêu cầu miền (domain requirements).
+
+
+4.	Mô tả vai trò của sơ đồ lớp UML trong thiết kế phần mềm.
+ → Giúp biểu diễn các lớp, thuộc tính, phương thức, và mối quan hệ giữa chúng trong hệ thống.
+
+
+5.	Tại sao kiểm thử phần mềm quan trọng trong phát triển phần mềm?
+ → Giúp phát hiện lỗi sớm, đảm bảo chất lượng và tính ổn định của phần mềm trước khi phát hành.
+
+
+6.	Định nghĩa nguyên lý SOLID trong lập trình hướng đối tượng.
+ → Là tập hợp 5 nguyên tắc giúp phần mềm dễ bảo trì và mở rộng: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.
+
+
+7.	Mô tả sự khác biệt giữa kiểm thử hộp đen và kiểm thử hộp trắng.
+ → Hộp đen kiểm tra đầu vào/đầu ra mà không cần biết cấu trúc bên trong; hộp trắng kiểm tra logic nội bộ của mã nguồn.
+
+
+8.	Mô tả quy trình thiết kế cơ sở dữ liệu từ sơ đồ lớp UML.
+ → Xác định lớp → chuyển thành bảng → ánh xạ thuộc tính → xác định khóa chính, khóa ngoại → chuẩn hóa.
+
+
+9.	Nêu ba ưu điểm của việc sử dụng mô hình phát triển phần mềm Agile.
+ → Linh hoạt, phản hồi nhanh với thay đổi, tăng sự hợp tác giữa nhóm và khách hàng.
+
+
+10.	Liệt kê các giai đoạn chính trong quá trình chuẩn hóa cơ sở dữ liệu.
+ → 1NF → 2NF → 3NF (loại bỏ lặp dữ liệu và phụ thuộc không cần thiết).
+III.	CÂU HỎI THẢO LUẬN NHÓM
+1.	So sánh mô hình phát triển phần mềm Agile và mô hình Waterfall.
+ → Agile linh hoạt, làm việc theo vòng lặp nhỏ; Waterfall tuyến tính, khó thay đổi yêu cầu.
+
+
+2.	Lợi ích của việc sử dụng UML trong thiết kế phần mềm là gì?
+ → Giúp trực quan hóa hệ thống, giao tiếp hiệu quả giữa các bên và dễ bảo trì.
+
+
+3.	Làm thế nào để đảm bảo phần mềm có thể bảo trì tốt trong tương lai?
+ → Viết code rõ ràng, áp dụng SOLID, kiểm thử đầy đủ, và tài liệu hóa tốt.
+
+
+4.	Tại sao các công ty phần mềm thường sử dụng mô hình phát triển lặp (Iterative Development)?
+ → Cho phép đánh giá và cải tiến liên tục, giảm rủi ro khi triển khai.
+
+
+5.	Vai trò của kiến trúc phần mềm trong việc xây dựng một hệ thống phần mềm phức tạp.
+ → Là nền tảng định hướng cấu trúc, hiệu năng và khả năng mở rộng của toàn hệ thống.
+
+
+6.	Làm thế nào để đảm bảo rằng một hệ thống phần mềm đáp ứng được yêu cầu bảo mật?
+ → Sử dụng xác thực, mã hóa, kiểm thử bảo mật và cập nhật định kỳ.
+
+
+7.	So sánh kiểm thử đơn vị (Unit Testing) và kiểm thử tích hợp (Integration Testing).
+ → Unit test kiểm tra từng module; Integration test kiểm tra sự tương tác giữa các module.
+
+
+8.	Những thách thức chính trong việc thu thập yêu cầu phần mềm là gì?
+ → Khó hiểu đúng nhu cầu khách hàng, yêu cầu thay đổi liên tục, và ngôn ngữ không rõ ràng.
+
+
+9.	Cách áp dụng quy trình Scrum vào dự án phát triển phần mềm thực tế.
+ → Chia dự án thành sprint, tổ chức daily meeting, review và retrospective định kỳ.
+
+
+10.	Tại sao việc tối ưu hóa mã nguồn lại quan trọng trong phát triển phần mềm?
+ → Giúp cải thiện hiệu năng, tiết kiệm tài nguyên, và nâng cao trải nghiệm người dùng
+IV. CÂU HỎI TÌNH HUỐNG
+1.	Bạn là một kỹ sư phần mềm trong một nhóm phát triển, khách hàng liên tục thay đổi yêu cầu. Bạn sẽ xử lý như thế nào?
+ → Sử dụng mô hình Agile, ghi nhận thay đổi qua backlog, và thỏa thuận lại phạm vi mỗi sprint.
+
+
+2.	Trong quá trình kiểm thử, bạn phát hiện một lỗi nghiêm trọng nhưng trưởng nhóm quyết định không sửa chữa. Bạn sẽ làm gì?
+ → Báo cáo lại rủi ro, lập biên bản, đề xuất họp đánh giá tác động trước khi phát hành.
+
+
+3.	Một dự án phần mềm gặp tình trạng chậm tiến độ do thay đổi yêu cầu liên tục từ khách hàng. Bạn sẽ đề xuất giải pháp gì?
+ → Áp dụng Agile, chia nhỏ chức năng và cố định phạm vi ngắn hạn.
+
+
+4.	Nhóm của bạn đang thiết kế cơ sở dữ liệu cho một hệ thống thương mại điện tử. Làm thế nào để đảm bảo thiết kế cơ sở dữ liệu không bị dư thừa?
+ → Chuẩn hóa đến 3NF, xác định rõ quan hệ khóa chính – khóa ngoại.
+
+
+5.	Bạn cần lựa chọn giữa hai mô hình phát triển phần mềm: Waterfall và Agile. Bạn sẽ chọn mô hình nào cho một dự án startup công nghệ? Tại sao?
+ → Chọn Agile vì phù hợp với môi trường thay đổi nhanh và cần phản hồi sớm từ khách hàng.
+
+
+6.	Một dự án phần mềm lớn gặp vấn đề về hiệu suất. Những bước nào cần thực hiện để tối ưu hiệu suất phần mềm?
+ → Phân tích bottleneck, tối ưu thuật toán, cơ sở dữ liệu và caching.
+
+
+7.	Một hệ thống đang hoạt động có nhiều lỗi bảo mật. Bạn sẽ làm gì để tăng cường bảo mật mà không ảnh hưởng đến người dùng hiện tại?
+ → Vá lỗi dần theo mức độ ưu tiên, triển khai bảo mật từng lớp, kiểm thử bảo mật định kỳ.
+
+
+8.	Khi thiết kế phần mềm, nhóm của bạn có nhiều ý kiến trái ngược nhau về cách triển khai một tính năng. Làm thế nào để đưa ra quyết định tốt nhất?
+ → Tổ chức buổi thảo luận, đánh giá ưu nhược điểm của từng phương án và biểu quyết dân chủ.
+
+
+9.	Khách hàng yêu cầu hệ thống phải có giao diện thân thiện với người dùng. Bạn sẽ làm gì để đảm bảo hệ thống đáp ứng tiêu chí này?
+ → Tiến hành khảo sát UX, tạo prototype và test người dùng trước khi triển khai.
+
+
+10.	Công ty bạn vừa tiếp nhận một dự án phần mềm cũ, mã nguồn lộn xộn và thiếu tài liệu. Bạn sẽ làm gì?
+ → Refactor từng phần, viết lại tài liệu, thêm unit test để đảm bảo ổn định trước khi mở rộng.
+
