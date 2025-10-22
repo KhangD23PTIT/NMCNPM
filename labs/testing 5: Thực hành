@@ -1,0 +1,354 @@
+BÀI TẬP THỰC HÀNH
+Câu 1: Viết một chương trình Java để quản lý thông tin sinh viên sử dụng lập trình hướng đối tượng.
+
+import java.util.*;
+
+class Student {
+    private String id;
+    private String name;
+    private int age;
+    private double gpa;
+
+    public Student(String id, String name, int age, double gpa) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.gpa = gpa;
+    }
+
+    public String getId() { return id; }
+    public String getName() { return name; }
+    public double getGpa() { return gpa; }
+
+    @Override
+    public String toString() {
+        return "MSSV: " + id + ", Họ tên: " + name + ", Tuổi: " + age + ", GPA: " + gpa;
+    }
+}
+
+public class StudentManager {
+    private static ArrayList<Student> list = new ArrayList<>();
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println("\n--- QUẢN LÝ SINH VIÊN ---");
+            System.out.println("1. Thêm sinh viên");
+            System.out.println("2. Hiển thị danh sách");
+            System.out.println("3. Tìm sinh viên theo MSSV");
+            System.out.println("4. Sắp xếp theo điểm");
+            System.out.println("0. Thoát");
+            System.out.print("Chọn: ");
+            choice = sc.nextInt();
+            sc.nextLine();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Nhập MSSV: "); String id = sc.nextLine();
+                    System.out.print("Nhập họ tên: "); String name = sc.nextLine();
+                    System.out.print("Nhập tuổi: "); int age = sc.nextInt();
+                    System.out.print("Nhập GPA: "); double gpa = sc.nextDouble();
+                    list.add(new Student(id, name, age, gpa));
+                    break;
+                case 2:
+                    System.out.println("\nDanh sách sinh viên:");
+                    for (Student s : list) System.out.println(s);
+                    break;
+                case 3:
+                    System.out.print("Nhập MSSV cần tìm: ");
+                    String searchId = sc.nextLine();
+                    for (Student s : list)
+                        if (s.getId().equalsIgnoreCase(searchId))
+                            System.out.println("Tìm thấy: " + s);
+                    break;
+                case 4:
+                    list.sort(Comparator.comparingDouble(Student::getGpa).reversed());
+                    System.out.println("Đã sắp xếp theo điểm GPA giảm dần.");
+                    break;
+            }
+        } while (choice != 0);
+        sc.close();
+    }
+}
+Câu 2: Xây dựng sơ đồ lớp UML cho hệ thống quản lý thư viện.
+ 
+Câu 3: Viết test case cho tính năng đăng ký tài khoản trong một hệ thống website.
+
+STT	Test Case	Dữ liệu kiểm thử	Kết quả mong đợi
+1	Đăng ký với đầy đủ thông tin hợp lệ	email: user@gmail.com, pass: Abc123!, xác nhận pass đúng	Tài khoản được tạo thành công
+2	Thiếu email	email: (trống), pass: Abc123!	Hiển thị thông báo lỗi “Vui lòng nhập email”
+3	Sai định dạng email	email: abc.com, pass: Abc123!	Báo lỗi “Email không hợp lệ”
+4	Mật khẩu quá ngắn	email: user@gmail.com, pass: 123	Báo lỗi “Mật khẩu phải ≥ 6 ký tự”
+5	Hai mật khẩu không trùng khớp	pass: Abc123!, confirm: Abc124!	Báo lỗi “Mật khẩu không khớp”
+6	Email đã tồn tại	email: user@gmail.com, pass: Abc123!	Báo lỗi “Email đã được đăng ký”
+7	Kiểm tra ký tự đặc biệt trong mật khẩu	email: newuser@gmail.com, pass: @A12bc!	Hệ thống chấp nhận, tạo tài khoản
+8	Kiểm tra lưu dữ liệu sau khi đăng ký	email: test@gmail.com, pass: Abc123!	Dữ liệu lưu thành công vào DB
+
+4. Thiết kế cơ sở dữ liệu cho hệ thống bán hàng trực tuyến và chuẩn hóa đến 3NF.
+Mô tả chính:
+ Gồm các bảng: Customer, Address, Category, Product, Inventory, Order, OrderItem, Payment, Shipment.
+-- CSDL HỆ THỐNG BÁN HÀNG TRỰC TUYẾN (3NF)
+
+CREATE TABLE Customer (
+  customer_id       BIGINT PRIMARY KEY AUTO_INCREMENT,
+  email             VARCHAR(255) NOT NULL UNIQUE,
+  password_hash     VARCHAR(255) NOT NULL,
+  full_name         VARCHAR(200) NOT NULL,
+  phone             VARCHAR(50),
+  created_at        DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Address (
+  address_id        BIGINT PRIMARY KEY AUTO_INCREMENT,
+  customer_id       BIGINT NOT NULL,
+  label             VARCHAR(50),
+  street            VARCHAR(255) NOT NULL,
+  city              VARCHAR(100) NOT NULL,
+  region            VARCHAR(100),
+  postal_code       VARCHAR(20),
+  country           VARCHAR(100) NOT NULL,
+  is_default        BOOLEAN DEFAULT FALSE,
+  FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
+);
+
+CREATE TABLE Category (
+  category_id       BIGINT PRIMARY KEY AUTO_INCREMENT,
+  name              VARCHAR(100) NOT NULL UNIQUE,
+  description       TEXT
+);
+
+CREATE TABLE Product (
+  product_id        BIGINT PRIMARY KEY AUTO_INCREMENT,
+  category_id       BIGINT,
+  sku               VARCHAR(100) UNIQUE,
+  name              VARCHAR(255) NOT NULL,
+  description       TEXT,
+  price             DECIMAL(12,2) NOT NULL,
+  created_at        DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (category_id) REFERENCES Category(category_id)
+);
+
+CREATE TABLE Inventory (
+  product_id        BIGINT PRIMARY KEY,
+  quantity_on_hand  INT NOT NULL DEFAULT 0,
+  reserved_qty      INT NOT NULL DEFAULT 0,
+  FOREIGN KEY (product_id) REFERENCES Product(product_id)
+);
+
+CREATE TABLE `Order` (
+  order_id          BIGINT PRIMARY KEY AUTO_INCREMENT,
+  customer_id       BIGINT NOT NULL,
+  order_date        DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  status            VARCHAR(50) NOT NULL,
+  shipping_address_id BIGINT,
+  billing_address_id  BIGINT,
+  total_amount      DECIMAL(12,2) NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES Customer(customer_id),
+  FOREIGN KEY (shipping_address_id) REFERENCES Address(address_id),
+  FOREIGN KEY (billing_address_id) REFERENCES Address(address_id)
+);
+
+CREATE TABLE OrderItem (
+  order_item_id     BIGINT PRIMARY KEY AUTO_INCREMENT,
+  order_id          BIGINT NOT NULL,
+  product_id        BIGINT NOT NULL,
+  quantity          INT NOT NULL,
+  unit_price        DECIMAL(12,2) NOT NULL,
+  discount          DECIMAL(12,2) DEFAULT 0,
+  FOREIGN KEY (order_id) REFERENCES `Order`(order_id),
+  FOREIGN KEY (product_id) REFERENCES Product(product_id)
+);
+
+CREATE TABLE Payment (
+  payment_id        BIGINT PRIMARY KEY AUTO_INCREMENT,
+  order_id          BIGINT NOT NULL,
+  amount            DECIMAL(12,2) NOT NULL,
+  method            VARCHAR(50),
+  status            VARCHAR(50),
+  paid_at           DATETIME,
+  transaction_ref   VARCHAR(200),
+  FOREIGN KEY (order_id) REFERENCES `Order`(order_id)
+);
+
+CREATE TABLE Shipment (
+  shipment_id       BIGINT PRIMARY KEY AUTO_INCREMENT,
+  order_id          BIGINT NOT NULL,
+  carrier           VARCHAR(100),
+  tracking_number   VARCHAR(100),
+  shipped_at        DATETIME,
+  delivered_at      DATETIME,
+  FOREIGN KEY (order_id) REFERENCES `Order`(order_id)
+);
+
+5. Viết một đoạn mã Java đơn giản để minh họa nguyên tắc đóng gói trong lập trình hướng đối tượng.
+public class Customer {
+    private long id;
+    private String fullName;
+    private String email;
+    private String phone;
+
+    public Customer(long id, String fullName, String email) {
+        this.id = id;
+        setFullName(fullName);
+        setEmail(email);
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        if (fullName == null || fullName.trim().isEmpty()) {
+            throw new IllegalArgumentException("Full name cannot be empty");
+        }
+        this.fullName = fullName.trim();
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        if (email == null || !email.matches("^[\\w.-]+@[\\w.-]+\\.[A-Za-z]{2,}$")) {
+            throw new IllegalArgumentException("Invalid email");
+        }
+        this.email = email.toLowerCase();
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        if (phone != null) {
+            phone = phone.replaceAll("[^\\d+]", "");
+            if (phone.length() < 7) {
+                throw new IllegalArgumentException("Invalid phone number");
+            }
+        }
+        this.phone = phone;
+    }
+
+    public String getDisplayName() {
+        return fullName + (phone != null ? " (" + phone + ")" : "");
+    }
+}
+
+6. Xây dựng sơ đồ tuần tự UML cho chức năng "Đăng nhập hệ thống". 
+7. Viết chương trình kiểm thử đơn vị (Unit Test) cho một phương thức tính tổng hai số trong Java.
+File: Calculator.java
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+
+File: CalculatorTest.java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class CalculatorTest {
+
+    private final Calculator calc = new Calculator();
+
+    @Test
+    void testAddPositiveNumbers() {
+        assertEquals(5, calc.add(2, 3));
+    }
+
+    @Test
+    void testAddNegativeNumbers() {
+        assertEquals(-5, calc.add(-2, -3));
+    }
+
+    @Test
+    void testAddPositiveAndNegative() {
+        assertEquals(1, calc.add(3, -2));
+    }
+
+    @Test
+    void testAddZero() {
+        assertEquals(3, calc.add(3, 0));
+        assertEquals(0, calc.add(0, 0));
+    }
+}
+
+Nếu dùng Maven, thêm vào pom.xml:
+<dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.9.3</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.9.3</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+Câu 8: Kịch bản kiểm thử chức năng thanh toán trong hệ thống thương mại điện tử
+Mục tiêu: Đảm bảo quy trình thanh toán hoạt động đúng, an toàn và thân thiện với người dùng.
+STT	Bước kiểm thử	Dữ liệu đầu vào	Kết quả mong đợi
+1	Người dùng chọn sản phẩm và thêm vào giỏ hàng	Sản phẩm hợp lệ	Sản phẩm hiển thị trong giỏ hàng
+2	Người dùng tiến hành thanh toán	Giỏ hàng có sản phẩm	Chuyển đến trang thanh toán
+3	Nhập thông tin giao hàng	Địa chỉ, số điện thoại	Thông tin được lưu và hiển thị đúng
+4	Chọn phương thức thanh toán	Thẻ tín dụng, ví điện tử, COD	Phương thức được áp dụng
+5	Nhập thông tin thanh toán	Số thẻ, ngày hết hạn, CVV	Hệ thống xác thực thông tin
+6	Xác nhận đơn hàng	Nhấn “Xác nhận”	Hiển thị thông báo thành công và mã đơn hàng
+7	Kiểm tra email xác nhận	Email người dùng	Email xác nhận đơn hàng được gửi
+
+Câu 9: Mô hình thực thể ERD cho hệ thống quản lý bệnh viện
+ 
+Các thực thể chính:
+•	Bệnh nhân (BenhNhan): Lưu thông tin cá nhân của người bệnh như mã bệnh nhân, họ tên, ngày sinh, giới tính, địa chỉ và số điện thoại.
+•	Bác sĩ (BacSi): Quản lý thông tin bác sĩ gồm mã bác sĩ, tên, chuyên khoa, số điện thoại.
+•	Phòng khám (PhongKham): Đại diện cho các phòng trong bệnh viện, gồm mã phòng, tên phòng, loại phòng và tầng.
+•	Lịch hẹn (LichHen): Ghi nhận lịch khám giữa bệnh nhân và bác sĩ, bao gồm mã lịch hẹn, ngày giờ, mã bệnh nhân, mã bác sĩ và mã phòng khám.
+•	Hồ sơ bệnh án (HoSoBenhAn): Là bản ghi chi tiết về quá trình khám chữa bệnh, gồm mã hồ sơ, ngày lập, chẩn đoán, ghi chú, liên kết với bệnh nhân và bác sĩ.
+•	Đơn thuốc (DonThuoc): Ghi nhận các đơn thuốc được kê trong quá trình điều trị, gồm mã đơn thuốc, ngày kê và liên kết với hồ sơ bệnh án.
+•	Thuốc (Thuoc): Danh mục các loại thuốc có thể được kê, gồm mã thuốc, tên thuốc, đơn vị tính và cách dùng.
+•	Chi tiết đơn thuốc (ChiTietDonThuoc): Liên kết giữa đơn thuốc và các loại thuốc cụ thể, gồm mã đơn thuốc, mã thuốc và số lượng.
+Các mối quan hệ:
+•	BenhNhan đặt LichHen
+•	BacSi tiếp nhận LichHen
+•	LichHen diễn ra tại PhongKham
+•	BacSi tạo HoSoBenhAn cho BenhNhan
+•	HoSoBenhAn có thể đi kèm DonThuoc
+•	DonThuoc gồm nhiều Thuoc thông qua ChiTietDonThuoc
+ Logic nghiệp vụ:
+•	Một bệnh nhân có thể có nhiều lịch hẹn và hồ sơ bệnh án.
+•	Một bác sĩ có thể khám nhiều bệnh nhân và kê nhiều đơn thuốc.
+•	Một đơn thuốc có thể chứa nhiều loại thuốc.
+•	Một phòng khám có thể phục vụ nhiều lịch hẹn trong ngày.
+Câu 10. Phân tích và mô tả một use case cụ thể trong hệ thống đặt vé máy bay 
+Use Case: Đặt vé máy bay
+
+ 
+•	Tên Use Case: Đặt vé
+•	Tác nhân: Khách hàng
+•	Mô tả: Khách hàng tìm chuyến bay, chọn chuyến, nhập thông tin, thanh toán và nhận vé.
+•	Luồng chính:
+•	Khách hàng đăng nhập hệ thống
+•	Tìm kiếm chuyến bay theo điểm đi, điểm đến, ngày bay
+•	Chọn chuyến bay phù hợp
+•	Nhập thông tin hành khách
+•	Chọn chỗ ngồi (nếu có)
+•	Thanh toán qua thẻ hoặc ví điện tử
+•	Nhận email xác nhận và vé điện tử
+•	Luồng phụ:
+•	Nếu thanh toán thất bại → hiển thị lỗi và cho phép thử lại
+•	Nếu không có chuyến bay phù hợp → hiển thị thông báo báo lỗi.
+
+
+
+
+
+
